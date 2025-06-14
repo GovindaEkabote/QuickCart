@@ -20,6 +20,7 @@
 `
 
 # Project Structure
+`
 QuickCart/
 ├── quickcart/            # Frontend (React)
     ├── public/
@@ -29,7 +30,7 @@ QuickCart/
     │   ├── api.js/      # create common api.jsx file to call all backend api's
     │   └── App.js       # Main App Router
     └── package.json
-
+`
 
 
 # Contact
