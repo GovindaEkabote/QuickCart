@@ -1,12 +1,40 @@
-# React + Vite
+## Overview
+`QuickCart is a full-stack e-commerce platform built with React.js, Tailwind CSS, Node.js, Express.js, and MongoDB. It provides a seamless shopping experience with features like product browsing, cart management, user authentication, and order processing.`
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Features
+`Frontend (React.js + Tailwind CSS)
+    User Authentication – Login, Signup, Logout
+    Product Catalog – Browse products by categories
+    Shopping Cart – Add/remove items, update quantities
+    Checkout & Payments – Secure checkout process (integrated with Stripe/PayPal)
+    Responsive Design – Works on mobile, tablet, and desktop
+    Search & Filters – Find products easily`
 
-Currently, two official plugins are available:
+# Getting Started
+# Installation
+`Clone the repository 
+    1. git clone https://github.com/GovindaEkabote/QuickCart
+    2. cd QuickCart
+    3. npm install
+    4. npm run dev
+`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Project Structure
+QuickCart/
+├── quickcart/            # Frontend (React)
+    ├── public/
+    ├── src/
+    │   ├── components/  # Reusable UI components
+    │   ├── pages/       # Page views (Home, Cart, Checkout)
+    │   ├── api.js/      # create common api.jsx file to call all backend api's
+    │   └── App.js       # Main App Router
+    └── package.json
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+# Contact
+`For questions or feedback, reach out:`
+Email: govindaekbote7@gmail.com
+GitHub: https://github.com/GovindaEkabote
+
+# 🎉 Thanks for checking out QuickCart! Happy Shopping! 🛒
