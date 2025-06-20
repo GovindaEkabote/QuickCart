@@ -6,6 +6,9 @@ import { Badge } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { IoGitCompareOutline } from "react-icons/io5";
+import { FaRegHeart } from "react-icons/fa";
+import Tooltip from '@mui/material/Tooltip';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -59,9 +62,9 @@ const Header = () => {
           <div className="col2 w-[50%]">
             <Search />
           </div>
-          <div className="col3 w-[30%] flex items-center justify-between">
-            <ul className="flex items-center gap-3">
-              <li className="list-none">
+          <div className="col3 w-[30%] flex pl-7">
+            <ul className="flex items-center justify-end w-full gap-3 ">
+              <li className="list-none ">
                 <Link
                   to="/login"
                   className="link transition text-[17px] font-[500]"
@@ -75,11 +78,34 @@ const Header = () => {
                 >
                   Register
                 </Link>
+                </li>
+                <li >
+                 <Tooltip title="compare">
                 <IconButton aria-label="cart">
+                  <StyledBadge badgeContent={4} color="secondary">
+                    <IoGitCompareOutline />
+                  </StyledBadge>
+                </IconButton>
+                </Tooltip>
+                 </li>
+                 
+                 <li>
+                 <Tooltip title="favorite">
+                 <IconButton aria-label="cart">
+                  <StyledBadge badgeContent={4} color="secondary">
+                    <FaRegHeart />
+                  </StyledBadge>
+                </IconButton>
+                </Tooltip>
+                 </li>
+                 <li>
+                 <Tooltip title="cart">
+                 <IconButton aria-label="cart">
                   <StyledBadge badgeContent={4} color="secondary">
                     <ShoppingCartIcon />
                   </StyledBadge>
                 </IconButton>
+                </Tooltip>
               </li>
             </ul>
           </div>

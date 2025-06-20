@@ -27,3 +27,8 @@ header .top-strip{
 .link:hover {
  color: brown;
 }
+
+.MuiBadge-badge{
+  background: #febd69 !important;
+  color: black !important;
+}
