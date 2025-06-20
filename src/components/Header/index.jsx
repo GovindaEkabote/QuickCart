@@ -32,7 +32,7 @@ const Header = () => {
               </p>
             </div>
             <div className="flex items-center justify-end col2 ">
-              <ul>
+              <ul className="flex items-center gap-3">
                 <li className="list-none">
                   <Link
                     to="/help"
@@ -40,6 +40,8 @@ const Header = () => {
                   >
                     Help center
                   </Link>
+                  </li>
+                  <li>
                   <Link
                     to="/order-tracking"
                     className=" text-[12px] font-[500] link transition"
@@ -68,14 +70,14 @@ const Header = () => {
               <li className="list-none ">
                 <Link
                   to="/login"
-                  className="link transition text-[17px] font-[500]"
+                  className="link transition text-[15px] font-[500] uppercase"
                 >
                   Login
                 </Link>
                 /&nbsp;
                 <Link
                   to="/register"
-                  className="link transition text-[17px] font-[500]"
+                  className="link transition text-[15px] font-[500] uppercase"
                 >
                   Register
                 </Link>
