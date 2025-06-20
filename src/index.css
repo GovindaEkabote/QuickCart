@@ -10,17 +10,22 @@ body {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  background: #e4f2f2;
+  
 }
 .container{
-    width: 90%;
+    width: 100% !important;
     margin: auto;
+}
+
+.top-strip2{
+  background: #e4f2f2;
 }
 
 header .top-strip{
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     /* background-color: rgb(243, 243, 243); */
+
 }
 
 
