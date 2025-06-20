@@ -10,26 +10,38 @@
     `5. Responsive Design – Works on mobile, tablet, and desktop`
     `6. Search & Filters – Find products easily`
 
-# Getting Started
-# Installation
-`Clone the repository`
-    `1. git clone https://github.com/GovindaEkabote/QuickCart`
-    `2. cd QuickCart`
-    `3. npm install`
-    `4. npm run dev`
-
-
 # Project Structure
 
-`QuickCart/`
-`├── quickcart/            # Frontend (React)`
-    `├── public/`
-    `├── src/`
-    `│   ├── components/  # Reusable UI components`
-    `│   ├── pages/       # Page views (Home, Cart, Checkout)`
-    `│   ├── api.js/      # create common api.jsx file to call all backend api's`
-    `│   └── App.js       # Main App Router`
-    `└── package.json`
+# 🔧 src/
+`All source code lives here.`
+
+# 📂 assets/
+`Static files like images, icons, or logos. These files are imported into components and displayed.
+✅ Example:
+logo.jpg – Brand logo used in the header or elsewhere`
+
+# 📂 components/
+`Reusable UI components organized by feature. Each component has its logic and optional styling`
+
+# 📂 Pages/
+`Contains major screens/pages rendered via routing Ideal for separation of features into views`
+
+# 📄 App.jsx
+`Root component that handles route setup and layout wrappers.`
+
+# main.jsx
+`Entry point of the React app. Renders <App /> to the DOM.`
+
+# index.css
+`Global styles. Tailwind directives are injected here.`
+
+
+# 🛠️ Setup Instructions
+` git clone https://github.com/GovindaEkabote/QuickCart 
+  cd QuickCart
+  npm install
+  npm run dev
+`
 
 
 
