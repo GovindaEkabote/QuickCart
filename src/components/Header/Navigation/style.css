@@ -13,6 +13,7 @@
 
 .nav li .submenu{
     visibility: hidden;
+    z-index: 1000;
 }
 
 .nav li:hover .submenu{
