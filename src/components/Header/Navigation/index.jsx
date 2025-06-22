@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 import { TbTruckDelivery } from "react-icons/tb";
 import "./style.css";
 import SideBar from "./SideBar";
+import { IoIosArrowForward } from "react-icons/io";
+
+
+
 
 const Navigation = () => {
 
@@ -21,7 +25,7 @@ const closeSideBar = () => {
   return (
     <>
       <nav className="py-2">
-        <div className="container flex justify-start items-center gap-8">
+        <div className="container flex justify-start items-center gap-12">
           <div className="col_1 w-[20%]">
             <Button className="!text-black w-full" onClick={openSideBar}>
               <MdOutlineMenu className="text-[18px]" />
@@ -31,33 +35,78 @@ const closeSideBar = () => {
           </div>
 
           <div className="col_2 w-[62%] ">
-            <ul className="flex items-center">
-              <li className="list-none">
+            <ul className="flex items-center nav">
+              <li className="list-none ">
                 <Link
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]  "
                 >
-                  <Button className="link transition !text-black uppercase">
+                  <Button className="link hover:!text-[#ff5252] transition !text-black uppercase">
                     HOME
                   </Button>
                 </Link>
               </li>
-              <li className="list-none">
+              <li className="list-none relative">
                 <Link
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase">
-                    Electronics
+                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
+                    Electronics&nbsp;  <IoIosArrowDown />
                   </Button>
+                 
                 </Link>
+                <div className="submenu absolute top-[120%] left-[0%] min-w-[200px] bg-white shadow-md opacity-0 transition-all">
+                    <li className="list-none relative">
+                    <Link to="/" className="w-full">
+                      <Button className="!text-black hover:!text-[#ff5252] w-full !justify-start !text-left !rounded-none">Mobiles <IoIosArrowForward className="!justify-end w-full"/> </Button>
+                      </Link>
+                       <div className="submenu absolute top-[0%] left-[100%] min-w-[150px] bg-white shadow-md opacity-0 transition-all">
+                    <li className="list-none">
+                    <Link to="/" className="w-full">
+                      <Button className="!text-black w-full hover:!text-[#ff5252] !justify-start !text-left !rounded-none">Mobiles</Button>
+                      </Link>
+                    </li>
+                     <li className="list-none">
+                    <Link to="/" className="w-full">
+                      <Button className="!text-black w-full hover:!text-[#ff5252] !justify-start !text-left !rounded-none">Laptop</Button>
+                      </Link>
+                    </li>
+                     <li className="list-none">
+                    <Link to="/" className="w-full">
+                      <Button className="!text-black w-full hover:!text-[#ff5252] !justify-start !text-left !rounded-none">Computer</Button>
+                      </Link>
+                    </li>
+                    <li className="list-none">
+                    <Link to="/" className="w-full">
+                      <Button className="!text-black w-full hover:!text-[#ff5252] !justify-start !text-left !rounded-none">Headphones</Button>
+                      </Link>
+                    </li>
+                </div>
+                    </li>
+                     <li className="list-none">
+                    <Link to="/" className="w-full">
+                      <Button className="!text-black w-full hover:!text-[#ff5252] !justify-start !text-left !rounded-none">Laptop</Button>
+                      </Link>
+                    </li>
+                     <li className="list-none">
+                    <Link to="/" className="w-full">
+                      <Button className="!text-black w-full hover:!text-[#ff5252] !justify-start !text-left !rounded-none">Computer</Button>
+                      </Link>
+                    </li>
+                    <li className="list-none">
+                    <Link to="/" className="w-full">
+                      <Button className="!text-black w-full hover:!text-[#ff5252] !justify-start !text-left !rounded-none">Headphones</Button>
+                      </Link>
+                    </li>
+                </div>
               </li>
               <li className="list-none">
                 <Link
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase">
+                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
                     Footwares
                   </Button>
                 </Link>
@@ -67,8 +116,8 @@ const closeSideBar = () => {
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase">
-                    kids
+                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
+                    Fashion
                   </Button>
                 </Link>
               </li>
@@ -77,7 +126,7 @@ const closeSideBar = () => {
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase">
+                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
                     accessories
                   </Button>
                 </Link>
@@ -87,7 +136,7 @@ const closeSideBar = () => {
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase">
+                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
                     groceries
                   </Button>
                 </Link>
@@ -97,7 +146,7 @@ const closeSideBar = () => {
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase">
+                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
                     books
                   </Button>
                 </Link>
@@ -107,7 +156,7 @@ const closeSideBar = () => {
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase">
+                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
                     jewellery
                   </Button>
                 </Link>
