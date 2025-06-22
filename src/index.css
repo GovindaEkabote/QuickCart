@@ -10,6 +10,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  overflow-x:hidden ;
+    background-color: #f3f4f6;
   
 }
 .container{
@@ -37,6 +39,5 @@ header .top-strip{
   background: #febd69 !important;
   color: black !important;
 }
-
 
 
