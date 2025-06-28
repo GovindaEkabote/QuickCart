@@ -8,6 +8,10 @@ import img7 from './1.jpg';
 import img8 from './Ambrane AGK-11 Trimmer 60 min Runtime 18 Length Settings (Black) 2.webp'; 
 import img9 from './img1_mobile.jpg'; 
 import img10 from './img1_mobile.jpg'; 
+import banner1 from './banner1.jpg'; 
+import banner2 from './banner2.jpg'; 
+import banner3 from './banner3.jpg'; 
+
 
 const images = {
   img1,
@@ -19,7 +23,10 @@ const images = {
   img5,
   img6,
   img8,
-  img9
+  img9,
+  banner1,
+banner2,
+banner3
 };
 
 export default images;

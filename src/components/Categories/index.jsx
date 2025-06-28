@@ -13,7 +13,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 const Categories = () => {
   return (
-    <div className="categories  !py-4">
+    <div className="categories  pt-4 py-5">
       <div className="container ">
         <Swiper
           slidesPerView={7}
