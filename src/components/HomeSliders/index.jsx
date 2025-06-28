@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import images from "../../assets/banner/banner";   
+import bannerData from "../../assets/banner/banner";   
 import { Pagination, Autoplay } from "swiper/modules";
 
 const HomeSliders = () => {
@@ -20,25 +20,25 @@ const HomeSliders = () => {
             className="mySwiper !rounded-[20px]"
           >
             <SwiperSlide className="w-full">
-              <img src={images.img3} alt="Banner Slide" className="w-full rounded-[20px]" />
+              <img src={bannerData.images.img3} alt="Banner Slide" className="w-full rounded-[20px]" />
             </SwiperSlide>
             <SwiperSlide className="w-full">
-              <img src={images.img5} alt="Banner Slide" className="w-full rounded-[20px]" />
+              <img src={bannerData.images.img5} alt="Banner Slide" className="w-full rounded-[20px]" />
             </SwiperSlide>
             <SwiperSlide className="w-full">
-              <img src={images.banner1} alt="Banner Slide" className="w-full rounded-[20px]" />
+              <img src={bannerData.images.banner1} alt="Banner Slide" className="w-full rounded-[20px]" />
             </SwiperSlide>
             <SwiperSlide className="w-full">
-              <img src={images.banner2} alt="Banner Slide" className="w-full rounded-[20px]" />
+              <img src={bannerData.images.banner2} alt="Banner Slide" className="w-full rounded-[20px]" />
             </SwiperSlide>
              <SwiperSlide className="w-full">
-              <img src={images.banner3} alt="Banner Slide" className="w-full rounded-[20px]" />
+              <img src={bannerData.images.banner3} alt="Banner Slide" className="w-full rounded-[20px]" />
             </SwiperSlide>
           </Swiper>
         </div>
 
         <div className="w-[20%] ">
-          <img src={images.img8} alt="Grid Img 4" className=" h-full rounded-lg" />
+          <img src={bannerData.images.img8} alt="Grid Img 4" className=" h-full rounded-lg" />
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import images from "../../assets/banner/banner";
+import bannerData from "../../assets/banner/banner";
 // import './styles.css';
 
 // import required modules
@@ -32,7 +32,7 @@ const Categories = () => {
             <Link to="/">
               <div className="item h-[160px] w-full bg-white text-center flex flex-col items-center justify-between p-4 rounded-md">
                 <img
-                  src={images.img8}
+                  src={bannerData.images.img8}
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
@@ -44,7 +44,7 @@ const Categories = () => {
             <Link to="/">
               <div className="item h-[160px] w-full bg-white text-center flex flex-col items-center justify-between p-4 rounded-md">
                 <img
-                  src={images.img1}
+                  src={bannerData.images.img1}
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
@@ -55,7 +55,7 @@ const Categories = () => {
             <Link to="/">
               <div className="item h-[160px] w-full bg-white text-center flex flex-col items-center justify-between p-4 rounded-md">
                 <img
-                  src={images.img2}
+                  src={bannerData.images.img2}
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
@@ -66,7 +66,7 @@ const Categories = () => {
             <Link to="/">
               <div className="item h-[160px] w-full bg-white text-center flex flex-col items-center justify-between p-4 rounded-md">
                 <img
-                  src={images.img3}
+                  src={bannerData.images.img3}
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
@@ -77,7 +77,7 @@ const Categories = () => {
             <Link to="/">
               <div className="item h-[160px] w-full bg-white text-center flex flex-col items-center justify-between p-4 rounded-md">
                 <img
-                  src={images.img7}
+                  src={bannerData.images.img7}
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
@@ -88,7 +88,7 @@ const Categories = () => {
             <Link to="/">
               <div className="item h-[160px] w-full bg-white text-center flex flex-col items-center justify-between p-4 rounded-md">
                 <img
-                  src={images.img8}
+                  src={bannerData.images.img8}
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
@@ -99,7 +99,7 @@ const Categories = () => {
             <Link to="/">
               <div className="item h-[160px] w-full bg-white text-center flex flex-col items-center justify-between p-4 rounded-md">
                 <img
-                  src={images.img8}
+                  src={bannerData.images.img8}
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
@@ -110,7 +110,7 @@ const Categories = () => {
             <Link to="/">
               <div className="item h-[160px] w-full bg-white text-center flex flex-col items-center justify-between p-4 rounded-md">
                 <img
-                  src={images.img8}
+                  src={bannerData.images.img8}
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
@@ -121,7 +121,7 @@ const Categories = () => {
             <Link to="/">
               <div className="item h-[160px] w-full bg-white text-center flex flex-col items-center justify-between p-4 rounded-md">
                 <img
-                  src={images.img8}
+                  src={bannerData.images.img8}
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
