@@ -48,7 +48,7 @@ const Categories = () => {
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
-                <h3 className="uppercase text-sm font-bold">Fashion</h3>
+                <h3 className="uppercase text-sm font-bold">Books</h3>
               </div>
             </Link>
           </SwiperSlide><SwiperSlide>
@@ -59,7 +59,7 @@ const Categories = () => {
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
-                <h3 className="uppercase text-sm font-bold">Fashion</h3>
+                <h3 className="uppercase text-sm font-bold">Electronics</h3>
               </div>
             </Link>
           </SwiperSlide><SwiperSlide>
@@ -70,7 +70,7 @@ const Categories = () => {
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
-                <h3 className="uppercase text-sm font-bold">Fashion</h3>
+                <h3 className="uppercase text-sm font-bold">Toys</h3>
               </div>
             </Link>
           </SwiperSlide><SwiperSlide>
@@ -81,7 +81,7 @@ const Categories = () => {
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
-                <h3 className="uppercase text-sm font-bold">Fashion</h3>
+                <h3 className="uppercase text-sm font-bold">Mobiles</h3>
               </div>
             </Link>
           </SwiperSlide><SwiperSlide>
@@ -92,7 +92,7 @@ const Categories = () => {
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
-                <h3 className="uppercase text-sm font-bold">Fashion</h3>
+                <h3 className="uppercase text-sm font-bold">Laptop</h3>
               </div>
             </Link>
           </SwiperSlide><SwiperSlide>
@@ -103,7 +103,7 @@ const Categories = () => {
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
-                <h3 className="uppercase text-sm font-bold">Fashion</h3>
+                <h3 className="uppercase text-sm font-bold">HeadPhone</h3>
               </div>
             </Link>
           </SwiperSlide><SwiperSlide>
@@ -114,7 +114,7 @@ const Categories = () => {
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
-                <h3 className="uppercase text-sm font-bold">Fashion</h3>
+                <h3 className="uppercase text-sm font-bold">jewellery</h3>
               </div>
             </Link>
           </SwiperSlide><SwiperSlide>
@@ -125,7 +125,43 @@ const Categories = () => {
                   alt="Category"
                   className="w-[90px] h-[90px] object-contain rounded-md"
                 />
-                <h3 className="uppercase text-sm font-bold">Fashion</h3>
+                <h3 className="uppercase text-sm font-bold">Watches</h3>
+              </div>
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Link to="/">
+              <div className="item h-[160px] w-full bg-white text-center flex flex-col items-center justify-between p-4 rounded-md">
+                <img
+                  src={bannerData.images.img8}
+                  alt="Category"
+                  className="w-[90px] h-[90px] object-contain rounded-md"
+                />
+                <h3 className="uppercase text-sm font-bold">Accessories</h3>
+              </div>
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Link to="/">
+              <div className="item h-[160px] w-full bg-white text-center flex flex-col items-center justify-between p-4 rounded-md">
+                <img
+                  src={bannerData.images.img8}
+                  alt="Category"
+                  className="w-[90px] h-[90px] object-contain rounded-md"
+                />
+                <h3 className="uppercase text-sm font-bold">Footware</h3>
+              </div>
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Link to="/">
+              <div className="item h-[160px] w-full bg-white text-center flex flex-col items-center justify-between p-4 rounded-md">
+                <img
+                  src={bannerData.images.img8}
+                  alt="Category"
+                  className="w-[90px] h-[90px] object-contain rounded-md"
+                />
+                <h3 className="uppercase text-sm font-bold">Bages</h3>
               </div>
             </Link>
           </SwiperSlide>
@@ -136,3 +172,7 @@ const Categories = () => {
 };
 
 export default Categories;
+
+
+
+
