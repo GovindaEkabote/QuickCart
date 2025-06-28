@@ -5,7 +5,7 @@ import BannerBox from "../BannerBox";
 const Banners = () => {
   return (
     <div>
-      <BannerBox item={4} />
+      <BannerBox item={3} />
     </div>
   );
 };

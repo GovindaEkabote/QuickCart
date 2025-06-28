@@ -27,6 +27,11 @@ const Home = () => {
         <Banners />
       </div>
     </section>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
    </>
   )
 }
