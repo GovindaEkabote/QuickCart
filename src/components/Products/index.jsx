@@ -7,8 +7,9 @@ import Rating from "@mui/material/Rating";
 const Products = () => {
   return (
     <div className="productItem rounded-md shadow-lg overflow-hidden border-1  border-[rgba(0,0,0,0.4)]">
-      <div className="imgWrapper w-[100%] h-[220px]  overflow-hidden rounded-md">
+      <div className="imgWrapper w-[100%] h-[220px]  overflow-hidden rounded-md relative">
         <img src={images} className="w-full " />
+        <span className="dixcount flex items-center absolute top-[5%] left-[5%] z-50 bg-blue-400 p-1 text-[12px] text-white rounded-lg font-500">20%</span>
       </div>
       <div className="info p-3 bg-[rgb(247,247,247)] ">
         <h6 className="text-[13px]">
