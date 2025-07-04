@@ -6,6 +6,8 @@ import Banners from "../../components/Banners";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import Products from "../../components/Products";
+import ProductSlider from "../../ProductSlider";
 
 const Home = () => {
   const [value, setValue] = useState(0);
@@ -19,7 +21,7 @@ const Home = () => {
       <Categories />
       <section className="py-16 bg-white ">
         <div className="container">
-          <div className="freeShipping !mb-5 w-[80%] !m-auto rounded-md p-4 border-2 border-amber-700 flex items-center justify-between">
+          <div className="freeShipping !mb-5  w-[80%] !m-auto rounded-md p-4 border-2 border-amber-700 flex items-center justify-between">
             <div className="col1 flex items-center">
               <p className="text-2xl uppercase font-[500]">Free Shipping</p>
               <TbTruckDelivery className="!ml-1 text-4xl" />
@@ -79,7 +81,9 @@ const Home = () => {
               </Box>
             </div>
           </div>
+          <ProductSlider items={5}/>
         </div>
+        
       </section>
       <br />
       <br />

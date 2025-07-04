@@ -53,3 +53,19 @@ header .top-strip{
 .categories .item:hover img{
   transform: scale(1.1);
 }
+
+.css-1usuzwp-MuiButtonBase-root-MuiTab-root.Mui-selected{
+  color: brown !important;
+}
+
+.MuiTabs-indicator{
+  /* background-color: #febd69 !important; */
+  border: 1px solid #febd69;
+}
+
+
+.swiper-button-next{
+  /* width: 10px !important; */
+  /* height: 10px !important; */
+  
+}
