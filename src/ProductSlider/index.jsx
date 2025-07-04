@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
 // import bannerData from "../../assets/banner/banner";
-import { Pagination, Autoplay } from "swiper/modules";
+
 import Products from "../components/Products";
 
 const ProductSlider = (props) => {
@@ -22,6 +22,33 @@ const ProductSlider = (props) => {
         modules={[Navigation]}
         className="mySwiper"
       >
+        <SwiperSlide>
+          <Products />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Products />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Products />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Products />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Products />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Products />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Products />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Products />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Products />
+        </SwiperSlide>
         <SwiperSlide>
           <Products />
         </SwiperSlide>

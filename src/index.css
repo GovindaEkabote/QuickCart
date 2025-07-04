@@ -64,8 +64,27 @@ header .top-strip{
 }
 
 
-.swiper-button-next{
-  /* width: 10px !important; */
-  /* height: 10px !important; */
-  
+.productSlider .swiper-wrapper{
+  padding: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
+
+/* .swiper-button-next {
+  width: 10px !important;
+  height: 10px !important;
+ 
+  transition: color 0.3s;
+  background-color: #f3f4f6;
+  border-radius: 50% !important;
+  padding: 10px !important;
+  color: red !important;
+  padding: 30px !important;
+  opacity: 0.5;
+  font-size: 15px !important;
+}
+
+.swiper-button-next:hover {
+  color: rgb(0, 0, 0) !important; /* Change color on hover */
+  /* background: red; */
+/* }  */
