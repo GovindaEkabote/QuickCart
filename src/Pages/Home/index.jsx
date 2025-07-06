@@ -8,6 +8,11 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import Products from "../../components/Products";
 import ProductSlider from "../../ProductSlider";
+import BannerBox from "../../components/BannerBox";
+import { TbTruckReturn } from "react-icons/tb";
+import { RiSecurePaymentLine } from "react-icons/ri";
+import { BsGift } from "react-icons/bs";
+import { BiSupport } from "react-icons/bi";
 
 const Home = () => {
   const [value, setValue] = useState(0);
@@ -19,7 +24,7 @@ const Home = () => {
     <>
       <HomeSliders />
       <Categories />
-      <section className="py-16 bg-white ">
+      <section className="py-8 pt-2 bg-white ">
         <div className="container">
           <div className="freeShipping !mb-5  w-[80%] !m-auto rounded-md p-4 border-2 border-amber-700 flex items-center justify-between">
             <div className="col1 flex items-center">
@@ -35,13 +40,13 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <Banners />
+          <Banners  items={3} />
         </div>
       </section>
 
       <section className="bg-white">
         <div className="container !mt-8">
-          <div className="flex items-center justify-between py-5">
+          <div className="flex items-center justify-between py-5 ">
             <div className="leftSection w-[25%]">
               <h3 className="uppercase font-[600] text-[20px]">
                 Popular Products
@@ -83,7 +88,61 @@ const Home = () => {
           </div>
           <ProductSlider items={6}/>
         </div>
-        
+      </section>
+
+      <section className="py-5 pt-0 bg-white">
+        <div className="container"> 
+        <BannerBox items={4} />
+        <h3 className="uppercase font-[600] text-[20px]">
+                latest Products
+              </h3>
+              <h3 className="font-[400] text-[14px]">
+                Explore the latest products—available for a limited time this month.
+              </h3>
+             <ProductSlider items={6}/>    
+        </div>
+      </section>
+      <section className="py-5 pt-0 bg-white">
+        <div className="container"> 
+        <h3 className="uppercase font-[600] text-[20px]">
+                Feature Products
+              </h3>
+              <h3 className="font-[400] text-[14px]">
+                Discover our top-rated products, available for a limited time.
+              </h3>
+             <ProductSlider items={6}/>    
+        </div>
+      </section>
+      <section className="py-2 pb-5 bg-white">
+        <div className="container ">
+          <div className="freeShipping  !m-auto rounded-md flex items-center justify-between">
+            <div className="col1 flex flex-col items-center">
+              <TbTruckDelivery className="!ml-1 text-[40px]" />
+              <p className="text-md uppercase font-[500]">Free Shipping</p>
+              <p className="text-[12px]  font-[300]">For all order Over Rs.500</p>
+            </div>
+            <div className="col1 flex flex-col items-center">
+              <TbTruckReturn className="!ml-1 text-[40px]" />
+              <p className="text-md uppercase font-[500]">30 Days Returns</p>
+              <p className="text-[12px]  font-[300]">For an Exchange Product</p>
+            </div>
+            <div className="col1 flex flex-col items-center">
+              <RiSecurePaymentLine className="!ml-1 text-[40px]" />
+              <p className="text-md uppercase font-[500]">Secured Payment</p>
+              <p className="text-[12px]  font-[300]">Payment cards Accepted</p>
+            </div>
+            <div className="col1 flex flex-col items-center">
+              <BsGift className="!ml-1 text-[40px]" />
+              <p className="text-md uppercase font-[500]">Special Gift</p>
+              <p className="text-[12px]  font-[300]">Our First Product Order</p>
+            </div>
+            <div className="col1 flex flex-col items-center">
+              <BiSupport className="!ml-1 text-[40px]" />
+              <p className="text-md uppercase font-[500]">Support 24/7</p>
+              <p className="text-[12px]  font-[300]">Contact Anytime</p>
+            </div>
+          </div>
+        </div>
       </section>
       <br />
       <br />

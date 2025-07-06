@@ -11,7 +11,7 @@ const BannerBox = (props) => {
     <div className="py-5 w-full overflow-hidden box bannerBox">
       <Swiper
         spaceBetween={20}
-        slidesPerView={props.item} // Mobile defaul
+        slidesPerView={props.items} // Mobile defaul
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         loop={true}

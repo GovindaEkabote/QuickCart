@@ -17,7 +17,6 @@ const Products = () => {
           <div className="img h-[220px]  overflow-hidden">
             <img src={images} className="w-full " />
             <img src="https://m.media-amazon.com/images/I/41RCVsQkYDL._SX300_SY300_QL70_FMwebp_.jpg" className="w-full top-3 left-0 absolute opacity-0 transition-all duration-500 group-hover:opacity-100" />
-
           </div>
         </Link>
         <span className="dixcount flex items-center absolute top-[5%] left-[5%] z-50 bg-blue-400 p-1 text-[12px] text-white rounded-lg font-500">
