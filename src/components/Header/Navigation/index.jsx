@@ -24,7 +24,7 @@ const closeSideBar = () => {
 };
   return (
     <>
-      <nav className="py-2">
+      <nav className="">
         <div className="container flex justify-start items-center gap-12">
           <div className="col_1 w-[20%]">
             <Button className="!text-black w-full" onClick={openSideBar}>
@@ -41,7 +41,7 @@ const closeSideBar = () => {
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]  "
                 >
-                  <Button className="link hover:!text-[#ff5252] transition !text-black uppercase">
+                  <Button className="link hover:!text-[#ff5252] transition !text-black uppercase !py-4">
                     HOME
                   </Button>
                 </Link>
@@ -51,7 +51,7 @@ const closeSideBar = () => {
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
+                  <Button className="!py-4 link transition !text-black uppercase hover:!text-[#ff5252]">
                     Electronics&nbsp;  <IoIosArrowDown />
                   </Button>
                  
@@ -106,7 +106,7 @@ const closeSideBar = () => {
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
+                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252] !py-4">
                     Footwares
                   </Button>
                 </Link>
@@ -116,7 +116,7 @@ const closeSideBar = () => {
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
+                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252] !py-4">
                     Fashion
                   </Button>
                 </Link>
@@ -126,7 +126,7 @@ const closeSideBar = () => {
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
+                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252] !py-4">
                     accessories
                   </Button>
                 </Link>
@@ -136,7 +136,7 @@ const closeSideBar = () => {
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
+                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252] !py-4">
                     groceries
                   </Button>
                 </Link>
@@ -146,7 +146,7 @@ const closeSideBar = () => {
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
+                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252] !py-4">
                     books
                   </Button>
                 </Link>
@@ -156,7 +156,7 @@ const closeSideBar = () => {
                   to="/"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
-                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252]">
+                  <Button className="link transition !text-black uppercase hover:!text-[#ff5252] !py-4">
                     jewellery
                   </Button>
                 </Link>
