@@ -3,13 +3,37 @@ import images from "../../assets/products/watches/boAt Cosmos Pro 1.webp";
 import "../Products/style.css";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
+import Button from "@mui/material/Button";
+import { FaRegHeart } from "react-icons/fa6";
+import { FaCodeCompare } from "react-icons/fa6";
+import { MdOutlineZoomOutMap } from "react-icons/md";
+import Tooltip from '@mui/material/Tooltip';
 
 const Products = () => {
   return (
     <div className="productItem rounded-md shadow-lg overflow-hidden border-1  border-[rgba(0,0,0,0.4)]">
-      <div className="imgWrapper w-[100%] h-[220px]  overflow-hidden rounded-md relative">
+      <div className="group imgWrapper w-[100%] h-[220px]  overflow-hidden rounded-md relative">
         <img src={images} className="w-full " />
-        <span className="dixcount flex items-center absolute top-[5%] left-[5%] z-50 bg-blue-400 p-1 text-[12px] text-white rounded-lg font-500">20%</span>
+        <span className="dixcount flex items-center absolute top-[5%] left-[5%] z-50 bg-blue-400 p-1 text-[12px] text-white rounded-lg font-500">
+          20%
+        </span>
+        <div className="actions absolute top-[-200px] !right-[5px] z-50 flex items-center gap-2  flex-col w-[50px] transition-all duration-300 group-hover:top-[15px]" >
+         <Tooltip title="Wish List">
+          <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full  !text-black hover:!bg-[#febd69] !bg-white hover:text-white ">
+            <FaRegHeart className="text-[15px] !text-black group-hover:text-white"/>
+          </Button>
+          </Tooltip>
+         <Tooltip title="compare">
+           <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full  !text-black hover:!bg-[#febd69] !bg-white hover:text-white ">
+            <FaCodeCompare className="text-[15px] !text-black group-hover:text-white"/>
+          </Button>
+          </Tooltip>
+           <Tooltip title="zoom">
+           <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full  !text-black hover:!bg-[#febd69] !bg-white hover:text-white ">
+            <MdOutlineZoomOutMap className="text-[15px] !text-black group-hover:text-white"/>
+          </Button>
+          </Tooltip>
+        </div>
       </div>
       <div className="info p-3 bg-[rgb(247,247,247)] ">
         <h6 className="text-[13px]">
@@ -30,8 +54,12 @@ const Products = () => {
           size="small"
         />
         <div className="flex items-center gap-4">
-          <span className="oldPrice line-through text-gray-600 text-[14px] font-bold">₹250.5</span>
-          <span className="newPrice text-[brown] text-[16px] font-bold">₹150.5</span>
+          <span className="oldPrice line-through text-gray-600 text-[14px] font-bold">
+            ₹250.5
+          </span>
+          <span className="newPrice text-[brown] text-[16px] font-bold">
+            ₹150.5
+          </span>
         </div>
       </div>
     </div>
