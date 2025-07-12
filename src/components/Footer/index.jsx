@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="!py-8 bg-white ">
       <div className="container">
         <div className="flex  justify-center gap-2">
-          <div className=" w-[30%]   footer flex ">
+          <div className=" w-[30%] border-r border-[#febd69]  footer flex ">
               <div className="part1 ">
                 <h2 className="pb-2 text-2xl font-bold">Contact Us</h2>
                 <p>67 MIG Sagar Chowk Vidi Gharkur Hydarabad Road Solapur</p>
@@ -22,7 +22,7 @@ const Footer = () => {
                 
               </div>
           </div>
-          <div className=" w-[20%]    footer flex">
+          <div className=" w-[20%]  pl-8  footer flex">
               <div className="part1 ">
                 <h2 className="pb-2 text-2xl font-bold">Products</h2>
                 <ul>

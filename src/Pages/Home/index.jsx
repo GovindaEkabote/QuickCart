@@ -119,18 +119,18 @@ const Home = () => {
           <div className="freeShipping  !m-auto rounded-md flex items-center justify-between">
             <div className="col1 flex flex-col pointer items-center">
               <TbTruckDelivery className="!ml-1 text-[40px]" />
-              <p className="text-md uppercase font-[500]">Free Shipping</p>
-              <p className="text-[12px]  font-[300]">For all order Over Rs.500</p>
+              <p className="text-[18px] uppercase font-[500]">Free Shipping</p>
+              <p >For all order Over Rs.500</p>
             </div>
             <div className="col1 flex flex-col items-center">
               <TbTruckReturn className="!ml-1 text-[40px]" />
-              <p className="text-md uppercase font-[500]">30 Days Returns</p>
-              <p className="text-[12px]  font-[300]">For an Exchange Product</p>
+              <p className="text-[18px]  uppercase font-[500]">30 Days Returns</p>
+              <p >For an Exchange Product</p>
             </div>
             <div className="col1 flex flex-col items-center">
               <RiSecurePaymentLine className="!ml-1 text-[40px]" />
-              <p className="text-md uppercase font-[500]">Secured Payment</p>
-              <p className="text-[12px]  font-[300]">Payment cards Accepted</p>
+              <p className="text-[18px] uppercase font-[500]">Secured Payment</p>
+              <p className="">Payment cards Accepted</p>
             </div>
             <div className="col1 flex flex-col items-center">
               <BsGift className="!ml-1 text-[40px]" />
