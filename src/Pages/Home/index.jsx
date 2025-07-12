@@ -13,6 +13,7 @@ import { TbTruckReturn } from "react-icons/tb";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { BsGift } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   const [value, setValue] = useState(0);
@@ -113,10 +114,10 @@ const Home = () => {
              <ProductSlider items={6}/>    
         </div>
       </section>
-      <section className="py-2 pb-5 bg-white">
+      <section className=" py-8  pb-5 bg-white">
         <div className="container ">
           <div className="freeShipping  !m-auto rounded-md flex items-center justify-between">
-            <div className="col1 flex flex-col items-center">
+            <div className="col1 flex flex-col pointer items-center">
               <TbTruckDelivery className="!ml-1 text-[40px]" />
               <p className="text-md uppercase font-[500]">Free Shipping</p>
               <p className="text-[12px]  font-[300]">For all order Over Rs.500</p>
@@ -144,11 +145,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+
+      <Footer/>
+
     </>
   );
 };
