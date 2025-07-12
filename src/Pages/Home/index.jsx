@@ -14,6 +14,7 @@ import { RiSecurePaymentLine } from "react-icons/ri";
 import { BsGift } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [value, setValue] = useState(0);
@@ -120,27 +121,29 @@ const Home = () => {
             <div className="col1 flex flex-col pointer items-center">
               <TbTruckDelivery className="!ml-1 text-[40px]" />
               <p className="text-[18px] uppercase font-[500]">Free Shipping</p>
-              <p >For all order Over Rs.500</p>
+              <Link className="link"><p >For all order Over Rs.500</p></Link> 
             </div>
             <div className="col1 flex flex-col items-center">
               <TbTruckReturn className="!ml-1 text-[40px]" />
               <p className="text-[18px]  uppercase font-[500]">30 Days Returns</p>
-              <p >For an Exchange Product</p>
+               <Link className="link"><p >For an Exchange Product</p></Link>
             </div>
             <div className="col1 flex flex-col items-center">
               <RiSecurePaymentLine className="!ml-1 text-[40px]" />
               <p className="text-[18px] uppercase font-[500]">Secured Payment</p>
-              <p className="">Payment cards Accepted</p>
+               <Link className="link"><p className="">Payment cards Accepted</p></Link>
             </div>
             <div className="col1 flex flex-col items-center">
               <BsGift className="!ml-1 text-[40px]" />
-              <p className="text-md uppercase font-[500]">Special Gift</p>
-              <p className="text-[12px]  font-[300]">Our First Product Order</p>
+              <p className="text-[18px] uppercase font-[500]">Special Gift</p>
+             <Link className="link"> <p>Our First Product Order</p></Link>
             </div>
             <div className="col1 flex flex-col items-center">
-              <BiSupport className="!ml-1 text-[40px]" />
-              <p className="text-md uppercase font-[500]">Support 24/7</p>
-              <p className="text-[12px]  font-[300]">Contact Anytime</p>
+            <BiSupport className="!ml-1 text-[40px]" />
+              <p className="text-[18px] uppercase font-[500]">Support 24/7</p>
+              <Link className="link">
+              <p>Contact Anytime</p>
+              </Link>
             </div>
           </div>
         </div>

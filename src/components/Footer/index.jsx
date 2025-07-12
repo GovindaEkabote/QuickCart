@@ -10,7 +10,7 @@ const Footer = () => {
           <div className=" w-[30%] border-r border-[#febd69]  footer flex ">
               <div className="part1 ">
                 <h2 className="pb-2 text-2xl font-bold">Contact Us</h2>
-                <p>67 MIG Sagar Chowk Vidi Gharkur Hydarabad Road Solapur</p>
+                <p>67 MIG Sagar Chowk Vidi Gharkur Hydarabad Road, Maharashtra</p>
                 <p>Solapur - 413005</p>
                 <br></br>
                 <span className="font-bold">Email :  </span>
