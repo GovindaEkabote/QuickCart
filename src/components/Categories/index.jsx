@@ -13,9 +13,10 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 const Categories = () => {
   return (
-    <div className="categories  pt-4 py-5">
+    <div className="categories  pt-2 ">
       <div className="container ">
         <Swiper
+          loop={true}
           slidesPerView={7}
           spaceBetween={10}
           pagination={{
@@ -26,7 +27,7 @@ const Categories = () => {
             disableOnInteraction: false,
           }}
           modules={[Pagination, Autoplay]}
-          className="mySwiper"
+          className="mySwiper !py-8"
         >
           <SwiperSlide>
             <Link to="/">

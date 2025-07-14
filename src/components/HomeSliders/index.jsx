@@ -11,6 +11,7 @@ const HomeSliders = () => {
       <div className="container flex gap-6">
         <div className="w-[80%]">
           <Swiper
+            loop={true}
             pagination={{ clickable: true }}
             autoplay={{
               delay: 3000,

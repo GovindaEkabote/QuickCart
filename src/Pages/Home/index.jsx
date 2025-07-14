@@ -13,7 +13,6 @@ import { TbTruckReturn } from "react-icons/tb";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { BsGift } from "react-icons/bs";
 import { BiSupport } from "react-icons/bi";
-import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -26,7 +25,7 @@ const Home = () => {
     <>
       <HomeSliders />
       <Categories />
-      <section className="py-8 pt-2 bg-white ">
+      <section className="py-8 pt-6 bg-white ">
         <div className="container">
           <div className="freeShipping !mb-5  w-[80%] !m-auto rounded-md p-4 border-2 border-amber-700 flex items-center justify-between">
             <div className="col1 flex items-center">
@@ -69,6 +68,7 @@ const Home = () => {
                   onChange={handleChange}
                   variant="scrollable"
                   scrollButtons
+    
                   allowScrollButtonsMobile
                   aria-label="scrollable force tabs example"
                 >
@@ -115,6 +115,7 @@ const Home = () => {
              <ProductSlider items={6}/>    
         </div>
       </section>
+      <hr className="border-t-1 border-gray-300 my-4 w-full" />
       <section className=" py-8  pb-5 bg-white">
         <div className="container ">
           <div className="freeShipping  !m-auto rounded-md flex items-center justify-between">
@@ -149,7 +150,6 @@ const Home = () => {
         </div>
       </section>
 
-      <Footer/>
 
     </>
   );
