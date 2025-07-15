@@ -11,6 +11,7 @@ import RangeSlider from "react-range-slider-input";
 import "react-range-slider-input/dist/style.css";
 import Rating from "@mui/material/Rating";
 
+
 const SideBar = () => {
   const [isOpenCategoryFilter, setIsopenCategoryFilter] = useState(true);
   const [isOpenAvailibilityFilter, setIsopenAvailibilityFilter] =
@@ -20,10 +21,10 @@ const SideBar = () => {
   const [isOpenRatingFilter, setIsopenRatingFilter] = useState(true);
 
   return (
-    <aside className="sidebar py-5 shadow p-2">
+    <aside className="sidebar  shadow p-2">
       <div className="box">
         <h3 className="uppercase !w-full !mb-3 text-[16px] font-[600] flex pr-3 items-center">
-          Product categories
+         Product categories
           <Button
             className="! w-[30px] !h-[30px] !min-w-[30px] !rounded-full !ml-auto !text-black"
             onClick={() => setIsopenCategoryFilter(!isOpenCategoryFilter)}
