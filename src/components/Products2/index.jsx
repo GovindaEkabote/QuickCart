@@ -9,14 +9,14 @@ import { FaCodeCompare } from "react-icons/fa6";
 import { MdOutlineZoomOutMap } from "react-icons/md";
 import Tooltip from "@mui/material/Tooltip";
 
-const Products = () => {
+const Products2 = () => {
   return (
-    <div className="productItem rounded-md shadow-lg overflow-hidden border-1  border-[rgba(0,0,0,0.4)]">
-      <div className="group imgWrapper w-[100%] overflow-hidden rounded-md relative">
+    <div className="productItem rounded-md shadow-lg overflow-hidden border-1  border-[rgba(0,0,0,0.4)] flex items-center">
+      <div className="group imgWrapper w-[25%] !h-[100%] overflow-hidden rounded-md relative">
         <Link to="/">
-          <div className="img   overflow-hidden">
+          <div className="img    overflow-hidden">
             <img src={images} className="w-full " />
-            <img src="https://m.media-amazon.com/images/I/41RCVsQkYDL._SX300_SY300_QL70_FMwebp_.jpg" className="w-full h-[94%] top-3 left-0 absolute opacity-0 transition-all duration-500 group-hover:opacity-100" />
+            <img src="https://www.gonoise.com/cdn/shop/products/5_db6e1a8f-79c4-4d81-ba43-de815dd7760b.png?v=1752669445" className="w-full h-[94%] top-3 left-0 absolute opacity-0 transition-all duration-500 group-hover:opacity-100" />
           </div>
         </Link>
         <span className="dixcount flex items-center absolute top-[5%] left-[5%] z-50 bg-blue-400 p-1 text-[12px] text-white rounded-lg font-500">
@@ -40,29 +40,35 @@ const Products = () => {
           </Tooltip>
         </div>
       </div>
-      <div className="info p-3 bg-[rgb(247,247,247)] ">
-        <h6 className="text-[13px]">
+      <div className="info  h-full p-3 py-3 w-[75%] bg-[rgb(247,247,247)]  ">
+        <h6 className="text-[20px]">
           <Link to="/" className="link transition-all">
             Brand Name
           </Link>
         </h6>
-        <h3 className="text-[14px] title mt-1 mb-1 font-[500] text-[rgba(0,0,0,0.9)]">
+        <h3 className="text-[18px] title !mt-2 !mb-2 font-[500] text-[rgba(0,0,0,0.9)]">
           <Link to="/" className="link  transition-all">
             Firebolt F-31A Digital Watch
           </Link>
         </h3>
+        <p className="text-[14px] !mb-2 line-clamp-3">
+
+            Resin Glass Water Resistant Case / bezel material: Resin / Chrome plated Stainless Steel Band Adjustable Buckle LED light 1/100-second stopwatch Measuring capacity: 59'59.99" Measuring modes: Net time, split time, 1st-2nd place times Daily alarm Hourly time signal Auto-calendar (28 days for February) 12/24-hour format Regular time keeping: Hour, minute, second, pm, date, day Accuracy: ±30 seconds per month Approx. battery life: 7 years on CR2016 and total weight: 48 g.
+
+
+        </p>
         <Rating
           name="half-rating"
           defaultValue={2.5}
           precision={0.5}
           readOnly
-          size="small"
+          size="medium"
         />
         <div className="flex items-center gap-4">
-          <span className="oldPrice line-through text-gray-600 text-[14px] font-bold">
+          <span className="oldPrice line-through text-gray-600 text-[19px] font-bold">
             ₹250.5
           </span>
-          <span className="newPrice text-[brown] text-[16px] font-bold">
+          <span className="newPrice text-[brown] text-[17px] font-bold">
             ₹150.5
           </span>
         </div>
@@ -71,4 +77,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Products2
