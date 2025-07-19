@@ -12,11 +12,11 @@ import Tooltip from "@mui/material/Tooltip";
 const Products2 = () => {
   return (
     <div className="productItem rounded-md shadow-lg overflow-hidden border-1  border-[rgba(0,0,0,0.4)] flex items-center">
-      <div className="group imgWrapper w-[25%] !h-[100%] overflow-hidden rounded-md relative">
+      <div className="group imgWrapper w-[25%] !h-full overflow-hidden rounded-md relative">
         <Link to="/">
-          <div className="img    overflow-hidden">
+          <div className="img overflow-hidden">
             <img src={images} className="w-full " />
-            <img src="https://www.gonoise.com/cdn/shop/products/5_db6e1a8f-79c4-4d81-ba43-de815dd7760b.png?v=1752669445" className="w-full h-[94%] top-3 left-0 absolute opacity-0 transition-all duration-500 group-hover:opacity-100" />
+            <img src="https://www.gonoise.com/cdn/shop/products/5_db6e1a8f-79c4-4d81-ba43-de815dd7760b.png?v=1752669445" className="w-full h-full top-0 left-0 absolute opacity-0 transition-all duration-500 group-hover:opacity-100" />
           </div>
         </Link>
         <span className="dixcount flex items-center absolute top-[5%] left-[5%] z-50 bg-blue-400 p-1 text-[12px] text-white rounded-lg font-500">
@@ -40,13 +40,13 @@ const Products2 = () => {
           </Tooltip>
         </div>
       </div>
-      <div className="info  h-full p-3 py-3 w-[75%] bg-[rgb(247,247,247)]  ">
-        <h6 className="text-[20px]">
+      <div className="info  h-full !px-5 py-3 w-[75%] bg-[rgb(247,247,247)]  ">
+        <h6 className="text-[18px]">
           <Link to="/" className="link transition-all">
             Brand Name
           </Link>
         </h6>
-        <h3 className="text-[18px] title !mt-2 !mb-2 font-[500] text-[rgba(0,0,0,0.9)]">
+        <h3 className="text-[16px] title !mt-2 !mb-2 font-[500] text-[rgba(0,0,0,0.9)]">
           <Link to="/" className="link  transition-all">
             Firebolt F-31A Digital Watch
           </Link>
@@ -62,15 +62,18 @@ const Products2 = () => {
           defaultValue={2.5}
           precision={0.5}
           readOnly
-          size="medium"
+          size="small"
         />
         <div className="flex items-center gap-4">
-          <span className="oldPrice line-through text-gray-600 text-[19px] font-bold">
+          <span className="oldPrice line-through text-gray-600 text-[15px] font-bold">
             ₹250.5
           </span>
-          <span className="newPrice text-[brown] text-[17px] font-bold">
+          <span className="newPrice text-[brown] text-[14px] font-bold">
             ₹150.5
           </span>
+        </div>
+        <div className="py-2">
+            <Button className="!bg-[#febd69] btn-org !text-black !font-[600]">Add To Cart</Button>
         </div>
       </div>
     </div>

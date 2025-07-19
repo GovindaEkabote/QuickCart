@@ -11,10 +11,13 @@ import MenuItem from "@mui/material/MenuItem";
 import { MdOutlineSort } from "react-icons/md";
 import Products2 from "../../components/Products2";
 
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+
 const ProductListing = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [sortByClicked, setSortByclicked] = useState("Sort By");
-  const [isItemView,setIsItemView] = useState('grid');
+  const [isItemView, setIsItemView] = useState("grid");
 
   const open = Boolean(anchorEl);
 
@@ -30,7 +33,7 @@ const ProductListing = () => {
     handleClose(); // Close the menu
   };
   return (
-    <section className="pt-1 pb-3 ">
+    <section className="pt-1 pb-0 ">
       <div className="container ">
         <Breadcrumbs aria-label="breadcrumb">
           <Link
@@ -58,25 +61,35 @@ const ProductListing = () => {
           </div>
           <div className="rightContent w-[80%] py-2 ">
             <div className="bg-[#f1f1f1] p-2 !mb-3 rounded-md w-full flex items-center justify-between">
-              <div className="col1 flex items-center  ">
-                <Button className=" !w-[40px] !h-[40px] !min-w-[40px] !rounded-full !max-w-[40px] !text-[250px] !text-black" onClick={() => setIsItemView('list')}>
+              <div className="col1 flex items-center itemViewAction ">
+                <Button
+                  className={`!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !max-w-[40px] !text-[250px] !text-black ${
+                    isItemView === "list" && "active"
+                  }`}
+                  onClick={() => setIsItemView("list")}
+                >
                   <IoMenu />
                 </Button>
-                <Button className=" !w-[40px] !h-[40px] !min-w-[40px] !rounded-full !max-w-[40px] !text-[250px] !text-black" onClick={() => setIsItemView('grid')}>
-                  <IoGrid  />
+                <Button
+                  className={`!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !max-w-[40px] !text-[250px] !text-black ${
+                    isItemView === "grid" && "active"
+                  }`}
+                  onClick={() => setIsItemView("grid")}
+                >
+                  <IoGrid />
                 </Button>
                 <span className="text-[15px] font-[500] pl-2 ">
                   There are 27 products
                 </span>
               </div>
-              <div className="col2 ml-auto flex items-center justify-end  ">
+              <div className="col23 ml-auto flex items-center justify-end  ">
                 <Button
                   id="basic-button"
                   aria-controls={open ? "basic-menu" : undefined}
                   aria-haspopup="true"
                   aria-expanded={open ? "true" : undefined}
                   onClick={handleClick}
-                  className="!bg-white !border-1 !border-[#000]"
+                  className="!bg-white !border-1 !border-[#000] "
                 >
                   {sortByClicked}
                   <span className="text-[20px] !font-[800]  pl-2 ">
@@ -93,7 +106,7 @@ const ProductListing = () => {
                       "aria-labelledby": "basic-button",
                     },
                   }}
-                  className="uppercase !mt-0.5"
+                  className="uppercase !mt-0.5 "
                 >
                   {[
                     "Sales Highest to Lowest",
@@ -115,36 +128,42 @@ const ProductListing = () => {
             </div>
 
             <div
-  className={`grid ${isItemView === 'grid' ? 'grid-cols-4 md:grid-cols-4' : 'grid-cols-1 md:grid-cols-1'} gap-4`}
->
-
-            {
-              isItemView === 'grid'? 
-              <>
-                 <Products />
-              <Products />
-              <Products />
-              <Products />
-              <Products />
-              <Products />
-              <Products />
-              <Products />
-              <Products />
-              <Products />
-              <Products />
-              <Products />
-              </>: <>
-                <Products2 />
-                <Products2 />
-                <Products2 />
-                <Products2 />
-                <Products2 />
-                <Products2 />
-                <Products2 />
-                <Products2 />
-              </>
-            }
-             
+              className={`grid ${
+                isItemView === "grid"
+                  ? "grid-cols-4 md:grid-cols-4"
+                  : "grid-cols-1 md:grid-cols-1"
+              } gap-4`}
+            >
+              {isItemView === "grid" ? (
+                <>
+                  <Products />
+                  <Products />
+                  <Products />
+                  <Products />
+                  <Products />
+                  <Products />
+                  <Products />
+                  <Products />
+                  <Products />
+                  <Products />
+                  <Products />
+                  <Products />
+                </>
+              ) : (
+                <>
+                  <Products2 />
+                  <Products2 />
+                  <Products2 />
+                  <Products2 />
+                  <Products2 />
+                  <Products2 />
+                  <Products2 />
+                  <Products2 />
+                </>
+              )}
+            </div>
+            <div className="flex items-center justify-center !mt-10 ">
+                 <Pagination count={10} variant="outlined" shape="rounded" size="large"  />
             </div>
           </div>
         </div>
