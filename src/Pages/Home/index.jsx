@@ -7,7 +7,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import Products from "../../components/Products";
-import ProductSlider from "../../ProductSlider";
+import ProductSlider from "../ProductSlider";
 import BannerBox from "../../components/BannerBox";
 import { TbTruckReturn } from "react-icons/tb";
 import { RiSecurePaymentLine } from "react-icons/ri";

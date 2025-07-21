@@ -10,7 +10,7 @@ import { Navigation } from "swiper/modules";
 
 // import bannerData from "../../assets/banner/banner";
 
-import Products from "../components/Products";
+import Products from "../../components/Products";
 
 const ProductSlider = (props) => {
   return (
