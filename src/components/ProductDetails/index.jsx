@@ -25,12 +25,22 @@ const ProductDetails = () => {
           >
             DETAILS
           </Link>
+           <Link
+            underline="hover"
+            color="inherit"
+            className="link transition"
+          >
+            Apple Digital Watch
+          </Link>
         </Breadcrumbs>
       </div>
       <section className="bg-white py-5">
         <div className="container flex gap-4 ">
-        <div className="productZoomContainer w-[30%] h-[60vh] overflow-hidden">
+        <div className="productZoomContainer w-[40%] ">
             <ProductZoom />
+        </div>
+         <div className="productContent w-[60%] ">
+          <h1>ProductDetails</h1>
         </div>
       </div>
       </section>

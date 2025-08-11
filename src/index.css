@@ -94,3 +94,41 @@ header .top-strip{
   color:#febd69;
 
 } 
+
+.zoomProductSliderThumb .swiper-button-next{
+    bottom: 0px !important;
+    right: inherit;
+    top: inherit;
+    width: 100% !important;
+    height: 30px !important;
+    border-radius: 0px !important;
+
+}
+.zoomProductSliderThumb .swiper-slide{
+    height:auto !important;
+}
+.swiper-button-next, .swiper-button-prev {
+  background: #e6b678 !important;
+  width: 30px !important;   /* reduced width */
+  height: 30px !important;  /* reduced height */
+  background-size: 60% !important; /* shrink background icon */
+  border-radius: 50%; /* optional: make it circular */
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 20px !important; /* smaller arrow icon */
+  color: black;
+  font-weight: 800 !important;
+  transform:  rotate(90deg) !important;
+}
+
+
+.zoomProductSliderThumb .swiper-button-prev{
+    top: 20px !important;
+    right: inherit;
+    /* top: inherit; */
+     width: 100% !important;
+    height: 30px !important;
+    border-radius: 0px !important;
+    left: 0;
+}
+
