@@ -120,14 +120,32 @@ p{
   background-size: 60% !important; /* shrink background icon */
   border-radius: 50%; /* optional: make it circular */
 }
-.swiper-button-next::after, .swiper-button-prev::after {
+.slider .swiper-button-next::after, .swiper-button-prev::after {
   font-size: 20px !important; /* smaller arrow icon */
   color: black;
   font-weight: 800 !important;
   transform:  rotate(90deg) !important;
 }
 
+.slider .swiper-button-prev::after {
+  font-size: 20px !important; /* smaller arrow icon */
+  color: black;
+  font-weight: 800 !important;
+  transform:  rotate(90deg) !important;
+}
 
+.swiper-button-next::after {
+  font-size: 20px !important; /* smaller arrow icon */
+  color: black;
+  font-weight: 800 !important;
+  transform:  rotate(0deg) !important;
+}
+.swiper-button-prev::after{
+   font-size: 20px !important; /* smaller arrow icon */
+  color: black;
+  font-weight: 800 !important;
+  transform:  rotate(0deg) !important;
+}
 .zoomProductSliderThumb .swiper-button-prev{
     top: 20px !important;
     right: inherit;
@@ -138,3 +156,10 @@ p{
     left: 0;
 }
 
+.productContent .actions button{
+  min-width: 45px ;
+  border: 2px solid rgba(0, 0, 0, 0.3) !important;
+  /* background-color: #f7d4a6 !important; */
+  height: 30px;
+  color: black;
+}
