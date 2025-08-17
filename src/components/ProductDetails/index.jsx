@@ -6,6 +6,8 @@ import Button from "@mui/material/Button";
 import { useState } from "react";
 import QtyBox from "../QtyBox";
 import { FaCartArrowDown } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
+import { FaCodeCompare } from "react-icons/fa6";
 
 const ProductDetails = () => {
   const [productActionIndex, setProductActionIndex] = useState(null);
@@ -41,8 +43,8 @@ const ProductDetails = () => {
             <div className="productZoomContainer w-[40%] ">
               <ProductZoom />
             </div>
-            <div className="productContent w-[60%] ">
-              <h1 className="text-[22px] font-[600] !mb-1">ProductDetails</h1>
+            <div className="productContent w-[60%] pr-10">
+              <h1 className="text-[22px] font-[600] !mb-1">Apple Watch SE (2nd Gen, 2023) [GPS 40mm] Smartwatch with Starlight Aluminum Case with Lake Green Sport Loop. Fitness & Sleep Tracker, Crash Detection, Heart Rate Monitor, Retina Display</h1>
               <div className="flex items-center gap-3 ">
                 <span className="text-gray-500 text-[15px]">
                   Brands :{" "}
@@ -124,7 +126,7 @@ const ProductDetails = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-5">
-                  <div className="qtybox-wrapper !w-[80px]">
+                  <div className="qtybox-wrapper !w-[70px]">
                     <QtyBox />
                   </div>
                   <div className="!mt-4 bg-[#febd69]  gap-2 rounded-md">
@@ -134,7 +136,18 @@ const ProductDetails = () => {
                     </Button>
                   </div>
                 </div>
-                <p className="text-[14px] !mt-2">No Cost EMI available on products above ₹5,000. EMI starts at ₹418.</p>
+                <p className="text-[14px] !mt-2">
+                  No Cost EMI available on products above ₹5,000. EMI starts at
+                  ₹418.
+                </p>
+              </div>
+              <div className="flex items-center gap-4 mt-5">
+                <span className="flex items-center gap-2 text-[15px] link cursor-pointer font-[500]">
+                  <FaRegHeart className="!text-[18px]" /> Add to Wishlist
+                </span>
+                <span className="flex items-center gap-3 text-[15px] link cursor-pointer font-[500]">
+                  <FaCodeCompare className="!text-[18px]" /> Add to compare
+                </span>
               </div>
             </div>
           </div>
