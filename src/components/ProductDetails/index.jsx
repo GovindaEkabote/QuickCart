@@ -4,9 +4,11 @@ import ProductZoom from "../ProductZoom";
 import Rating from "@mui/material/Rating";
 import Button from "@mui/material/Button";
 import { useState } from "react";
+import QtyBox from "../QtyBox";
+import { FaCartArrowDown } from "react-icons/fa";
 
 const ProductDetails = () => {
-  const [productActionIndex,setProductActionIndex] = useState(null)
+  const [productActionIndex, setProductActionIndex] = useState(null);
 
   return (
     <>
@@ -69,8 +71,11 @@ const ProductDetails = () => {
                 <span className="newPrice text-[brown] text-[20px] font-bold">
                   ₹150.5
                 </span>
-                 <span className="newPrice text-[14px]">
-                  Available In Stock : <span className="newPrice text-emerald-600 text-[14px] font-bold">78 Items</span>
+                <span className="newPrice text-[14px]">
+                  Available In Stock :{" "}
+                  <span className="newPrice text-emerald-600 text-[14px] font-bold">
+                    78 Items
+                  </span>
                 </span>
               </div>
               <div className="gap-3 !mt-2 pr-[14px] !mb-3">
@@ -82,16 +87,55 @@ const ProductDetails = () => {
                   499, High Quality Watches, Automatic Watch, Men Watches
                 </p>
                 <div className=" flex  items-center gap-2 !mt-3">
-                    <span className="text-[18px] ">size :</span>
-                    <div className="flex items-center gap-1 actions">
-                      <Button className={`${productActionIndex === 0 ? '!bg-[#f7d4a6]' : ''}`} onClick={() => setProductActionIndex(0)}>S</Button>
-                      <Button className={`${productActionIndex === 1 ? '!bg-[#f7d4a6]' : ''}`} onClick={() => setProductActionIndex(1)}>M</Button>
-                      <Button className={`${productActionIndex === 2 ? '!bg-[#f7d4a6]' : ''}`} onClick={() => setProductActionIndex(2)}>L</Button>
-                      <Button className={`${productActionIndex === 3 ? '!bg-[#f7d4a6]' : ''}`} onClick={() => setProductActionIndex(3)}>XL</Button>
-                    </div>
+                  <span className="text-[18px] ">size :</span>
+                  <div className="flex items-center gap-1 actions">
+                    <Button
+                      className={`${
+                        productActionIndex === 0 ? "!bg-[#f7d4a6]" : ""
+                      }`}
+                      onClick={() => setProductActionIndex(0)}
+                    >
+                      S
+                    </Button>
+                    <Button
+                      className={`${
+                        productActionIndex === 1 ? "!bg-[#f7d4a6]" : ""
+                      }`}
+                      onClick={() => setProductActionIndex(1)}
+                    >
+                      M
+                    </Button>
+                    <Button
+                      className={`${
+                        productActionIndex === 2 ? "!bg-[#f7d4a6]" : ""
+                      }`}
+                      onClick={() => setProductActionIndex(2)}
+                    >
+                      L
+                    </Button>
+                    <Button
+                      className={`${
+                        productActionIndex === 3 ? "!bg-[#f7d4a6]" : ""
+                      }`}
+                      onClick={() => setProductActionIndex(3)}
+                    >
+                      XL
+                    </Button>
+                  </div>
                 </div>
+                <div className="flex items-center gap-5">
+                  <div className="qtybox-wrapper !w-[80px]">
+                    <QtyBox />
+                  </div>
+                  <div className="!mt-4 bg-[#febd69]  gap-2 rounded-md">
+                    <Button className=" !m-1  !text-black !text-[14px] ">
+                      <FaCartArrowDown className="text-black text-[22px]" />
+                      &nbsp; Add To Cart
+                    </Button>
+                  </div>
+                </div>
+                <p className="text-[14px] !mt-2">No Cost EMI available on products above ₹5,000. EMI starts at ₹418.</p>
               </div>
-
             </div>
           </div>
         </section>

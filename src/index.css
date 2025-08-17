@@ -163,3 +163,9 @@ p{
   height: 30px;
   color: black;
 }
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+   font-size: 10px !important;
+}
