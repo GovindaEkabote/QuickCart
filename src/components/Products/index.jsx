@@ -41,7 +41,7 @@ const Products = () => {
         </div>
       </div>
       <div className="info p-3 bg-[rgb(247,247,247)] ">
-        <h6 className="text-[13px]">
+        <h6 className="text-[13px] !font-[400]">
           <Link to="/" className="link transition-all">
             Brand Name
           </Link>

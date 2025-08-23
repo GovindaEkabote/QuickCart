@@ -11,11 +11,12 @@ import { FaCodeCompare } from "react-icons/fa6";
 
 const ProductDetails = () => {
   const [productActionIndex, setProductActionIndex] = useState(null);
+  const [activeTag, setActiveTag] = useState(0);
 
   return (
     <>
       <div className="py-5 pb-0">
-        <div className="container !mb-2">
+        <div className="container  !mb-2">
           <Breadcrumbs aria-label="breadcrumb">
             <Link
               underline="hover"
@@ -23,7 +24,7 @@ const ProductDetails = () => {
               to="/"
               className="link transition"
             >
-              HOME
+              Home
             </Link>
             <Link
               underline="hover"
@@ -31,7 +32,7 @@ const ProductDetails = () => {
               to="/product/details/:id"
               className="link transition"
             >
-              DETAILS
+              Details
             </Link>
             <Link underline="hover" color="inherit" className="link transition">
               Apple Digital Watch
@@ -39,12 +40,17 @@ const ProductDetails = () => {
           </Breadcrumbs>
         </div>
         <section className="bg-white py-5">
-          <div className="container flex gap-8 ">
+          <div className="container flex gap-8">
             <div className="productZoomContainer w-[40%] ">
               <ProductZoom />
             </div>
             <div className="productContent w-[60%] pr-10">
-              <h1 className="text-[22px] font-[600] !mb-1">Apple Watch SE (2nd Gen, 2023) [GPS 40mm] Smartwatch with Starlight Aluminum Case with Lake Green Sport Loop. Fitness & Sleep Tracker, Crash Detection, Heart Rate Monitor, Retina Display</h1>
+              <h1 className="text-[22px] font-[600] !mb-1 line-clamp-3">
+                Apple Watch SE (2nd Gen, 2023) [GPS 40mm] Smartwatch with
+                Starlight Aluminum Case with Lake Green Sport Loop. Fitness &
+                Sleep Tracker, Crash Detection, Heart Rate Monitor, Retina
+                Display
+              </h1>
               <div className="flex items-center gap-3 ">
                 <span className="text-gray-500 text-[15px]">
                   Brands :{" "}
@@ -150,6 +156,104 @@ const ProductDetails = () => {
                 </span>
               </div>
             </div>
+          </div>
+          <div className="container ">
+            <div className="flex items-center gap-12 !mb-5">
+              <span
+                className={`link text-[18px] cursor-pointer font-[450] ${
+                  activeTag === 0 && "text-[#e78300]"
+                }`}
+                onClick={() => setActiveTag(0)}
+              >
+                About This Item
+              </span>
+              <span
+                className={`link text-[18px] cursor-pointer font-[450] ${
+                  activeTag === 1 && "text-[#e78300]"
+                }`}
+                onClick={() => setActiveTag(1)}
+              >
+                Product Details
+              </span>
+              <span
+                className={`link text-[18px] cursor-pointer font-[450] ${
+                  activeTag === 2 && "text-[#e78300]"
+                }`}
+                onClick={() => setActiveTag(2)}
+              >
+                Reviews (10)
+              </span>
+            </div>
+            {activeTag === 0 && (
+              <div className="shadow-md w-full py-5 px-8 rounded-md">
+                <h2 className="!mb-3 text-[18px] !font-[400]">
+                  Apple Watch SE (2nd Gen, 2023) [GPS 40mm] Smartwatch with
+                  Starlight Aluminum Case with Lake Green Sport Loop. Fitness &
+                  Sleep Tracker, Crash Detection, Heart Rate Monitor, Retina
+                  Display
+                </h2>
+                <h4>Vivid AMOLED Display: </h4>
+                <p>
+                  Large 4.9 CM display with 410x502 resolution for sharp visuals
+                  and a premium look.
+                </p>
+                <h4>Enhanced Connectivity: </h4>
+                <p>
+                  Supports SingleSync BT calling, GPS tracking, and Bluetooth
+                  5.3 for stable, fast connections.
+                </p>
+                <h4>Comprehensive Fitness Tracking: </h4>
+                <p>
+                  Includes Couch to 3K/5K running courses, VO2 Max, auto sports
+                  recognition, and 100+ multisport modes.
+                </p>
+                <h4>Advanced Health Monitoring: </h4>
+                <p>
+                  Equipped with heart rate, SpO2, and stress tracking for
+                  complete wellness support.
+                </p>
+                <h4>All-Day Utility: </h4>
+                <p>
+                  Offers a 5-day battery life, one-click measurements,
+                  camera/music control, AI voice assistant, and additional
+                  features like alarms, weather updates, and Find Phone
+                  functionality.
+                </p>
+              </div>
+            )}
+            {activeTag === 1 && (
+              <div class="relative overflow-x-auto">
+                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                  <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"></thead>
+                  <tbody>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+                      <td class=" py-4 font-[700]">Brand</td>
+                      <td class="!pl-40 py-4">
+                        Apple
+                      </td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+                      <td class=" py-4 font-[700]">Manufacturer</td>
+                      <td class="!pl-40 py-4">
+                        Imported by Titan Company Limited, Imported by Titan Company Limited 3 Sipcot Industries complex, Hosur- 635126
+                      </td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+                      <td class=" py-4 font-[700]">Special Features	</td>
+                      <td class="!pl-40 py-4">
+                        Activity Tracker, Heart Rate Monitor, Multisport Tracker, Phone Call, Stress Tracking
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            )}
+            {
+              activeTag === 2 && (<div className="">
+
+              </div>)
+            }
+
           </div>
         </section>
       </div>

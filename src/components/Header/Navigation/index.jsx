@@ -165,7 +165,7 @@ const closeSideBar = () => {
           </div>
 
           <div className="col_3 w-[18%]">
-            <p className="text-[13px] uppercase font-[450] flex items-center">
+            <p className="!text-[13px] uppercase font-[450] flex items-center">
               free delivery above Rs.500 &nbsp;
               <TbTruckDelivery className="text-[25px] ml-auto font-bold" />
             </p>

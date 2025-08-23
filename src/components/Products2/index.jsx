@@ -42,7 +42,7 @@ const Products2 = () => {
       </div>
       <div className="info  h-full !px-5 py-3 w-[75%] bg-[rgb(247,247,247)]  ">
         <h6 className="text-[18px]">
-          <Link to="/" className="link transition-all">
+          <Link to="/" className="link transition-all !font-[400]">
             Brand Name
           </Link>
         </h6>
