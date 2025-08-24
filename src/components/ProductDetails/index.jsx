@@ -9,6 +9,8 @@ import { FaCartArrowDown } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FaCodeCompare } from "react-icons/fa6";
 import TextField from "@mui/material/TextField";
+import ProductSlider from "../../Pages/ProductSlider";
+import BannerBox from "../BannerBox";
 
 const ProductDetails = () => {
   const [productActionIndex, setProductActionIndex] = useState(null);
@@ -188,7 +190,7 @@ const ProductDetails = () => {
             </div>
 
             {activeTag === 0 && (
-              <div className="shadow-xl w-full py-5 px-8 rounded-md">
+              <div className="shadow-md w-full py-5 px-8 rounded-md">
                 <h2 className="!mb-3 text-[18px] !font-[400]">
                   Apple Watch SE (2nd Gen, 2023) [GPS 40mm] Smartwatch with
                   Starlight Aluminum Case with Lake Green Sport Loop. Fitness &
@@ -225,7 +227,7 @@ const ProductDetails = () => {
               </div>
             )}
             {activeTag === 1 && (
-              <div className="shadow-xl w-full !py-2 px-8 rounded-md">
+              <div className="shadow-md w-full !py-2 px-8 rounded-md">
                 <div class="relative overflow-x-auto">
                   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <tbody>
@@ -258,7 +260,7 @@ const ProductDetails = () => {
               </div>
             )}
             {activeTag === 2 && (
-              <div className="shadow-xl w-[80%] py-5 px-8 rounded-md">
+              <div className="shadow-md w-[80%] py-5 px-8 rounded-md">
                 <div className="w-full productReviewsContainer">
                   <h2 className="text-[18px]">Customer Reviews</h2>
                   <div className="reviewScroll w-full max-h-[300px] overflow-y-scroll overflow-x-hidden !mt-5">
@@ -483,23 +485,34 @@ const ProductDetails = () => {
                         label="Write a review..."
                         multiline
                         rows={4}
-                        className="w-full"
+                        className="w-full !mt-3"
                       />
-                      <br/>
-                      <br/>
-                       <Rating
+                      <br />
+                      <br />
+                      <Rating
                         name="half-rating"
                         defaultValue={2.5}
                         precision={0.5}
                       />
                       <div className="flex items-center !mt-5 bg-[#febd69] w-[150px] rounded-md">
-                        <Button className="!text-black !font-[500] ">Submit Review</Button>
+                        <Button className="!text-black !font-[500] ">
+                          Submit Review
+                        </Button>
                       </div>
                     </form>
                   </div>
                 </div>
               </div>
             )}
+          </div>
+
+          <div>
+            <div className="container !pt-8">
+              <h3 className="uppercase font-[600] text-[20px] !mb-1">
+                Related Products
+              </h3>
+              <ProductSlider items={6} />
+            </div>
           </div>
         </section>
       </div>
