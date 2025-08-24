@@ -8,6 +8,7 @@ import QtyBox from "../QtyBox";
 import { FaCartArrowDown } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FaCodeCompare } from "react-icons/fa6";
+import TextField from "@mui/material/TextField";
 
 const ProductDetails = () => {
   const [productActionIndex, setProductActionIndex] = useState(null);
@@ -157,11 +158,12 @@ const ProductDetails = () => {
               </div>
             </div>
           </div>
-          <div className="container ">
-            <div className="flex items-center gap-12 !mb-5">
+
+          <div className="container">
+            <div className="flex items-center gap-12 !mb-1">
               <span
                 className={`link text-[18px] cursor-pointer font-[450] ${
-                  activeTag === 0 && "text-[#e78300]"
+                  activeTag === 0 && "text-[#ff5252]"
                 }`}
                 onClick={() => setActiveTag(0)}
               >
@@ -169,7 +171,7 @@ const ProductDetails = () => {
               </span>
               <span
                 className={`link text-[18px] cursor-pointer font-[450] ${
-                  activeTag === 1 && "text-[#e78300]"
+                  activeTag === 1 && "text-[#ff5252]"
                 }`}
                 onClick={() => setActiveTag(1)}
               >
@@ -177,15 +179,16 @@ const ProductDetails = () => {
               </span>
               <span
                 className={`link text-[18px] cursor-pointer font-[450] ${
-                  activeTag === 2 && "text-[#e78300]"
+                  activeTag === 2 && "text-[#ff5252]"
                 }`}
                 onClick={() => setActiveTag(2)}
               >
                 Reviews (10)
               </span>
             </div>
+
             {activeTag === 0 && (
-              <div className="shadow-md w-full py-5 px-8 rounded-md">
+              <div className="shadow-xl w-full py-5 px-8 rounded-md">
                 <h2 className="!mb-3 text-[18px] !font-[400]">
                   Apple Watch SE (2nd Gen, 2023) [GPS 40mm] Smartwatch with
                   Starlight Aluminum Case with Lake Green Sport Loop. Fitness &
@@ -222,38 +225,281 @@ const ProductDetails = () => {
               </div>
             )}
             {activeTag === 1 && (
-              <div class="relative overflow-x-auto">
-                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                  <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"></thead>
-                  <tbody>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-                      <td class=" py-4 font-[700]">Brand</td>
-                      <td class="!pl-40 py-4">
-                        Apple
-                      </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-                      <td class=" py-4 font-[700]">Manufacturer</td>
-                      <td class="!pl-40 py-4">
-                        Imported by Titan Company Limited, Imported by Titan Company Limited 3 Sipcot Industries complex, Hosur- 635126
-                      </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-                      <td class=" py-4 font-[700]">Special Features	</td>
-                      <td class="!pl-40 py-4">
-                        Activity Tracker, Heart Rate Monitor, Multisport Tracker, Phone Call, Stress Tracking
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div className="shadow-xl w-full !py-2 px-8 rounded-md">
+                <div class="relative overflow-x-auto">
+                  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <tbody>
+                      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+                        <td class=" py-4 font-[700] text-black">Brand</td>
+                        <td class="!pl-40 py-4">Apple</td>
+                      </tr>
+                      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+                        <td class=" py-4 font-[700] text-black">
+                          Manufacturer
+                        </td>
+                        <td class="!pl-40 py-4">
+                          Imported by Titan Company Limited, Imported by Titan
+                          Company Limited 3 Sipcot Industries complex, Hosur-
+                          635126
+                        </td>
+                      </tr>
+                      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+                        <td class=" py-4 font-[700] text-black">
+                          Special Features{" "}
+                        </td>
+                        <td class="!pl-40 py-4">
+                          Activity Tracker, Heart Rate Monitor, Multisport
+                          Tracker, Phone Call, Stress Tracking
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             )}
-            {
-              activeTag === 2 && (<div className="">
+            {activeTag === 2 && (
+              <div className="shadow-xl w-[80%] py-5 px-8 rounded-md">
+                <div className="w-full productReviewsContainer">
+                  <h2 className="text-[18px]">Customer Reviews</h2>
+                  <div className="reviewScroll w-full max-h-[300px] overflow-y-scroll overflow-x-hidden !mt-5">
+                    <div className="reviews pb-5 border-b border-[rgba(0,0,0,0.2)] mt-3 w-full flex items-center justify-between">
+                      <div className="info w-[60%] flex items-center  gap-3">
+                        <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Shah_Rukh_Khan_in_2023_%281%29.jpg"
+                            className="w-full "
+                          />
+                        </div>
+                        <div className="w-[80%] !mt-3">
+                          <h4 className="text-[16px]">Shah Rukh Khan</h4>
+                          <h5 className="!mb-0 text-[13px]">2025-08-01</h5>
+                          <p className="!mt-0 mb-0 line-clamp-2">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electronic typesetting, remaining essentially
+                            unchanged. It was popularised in the 1960s with the
+                            release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing
+                            software like Aldus PageMaker including versions of
+                            Lorem Ipsum.
+                          </p>
+                        </div>
+                      </div>
+                      <Rating
+                        name="half-rating"
+                        defaultValue={2.5}
+                        precision={0.5}
+                        readOnly
+                        // size="small"
+                      />
+                    </div>
+                    <div className="reviews pb-5 border-b border-[rgba(0,0,0,0.2)] mt-3 w-full flex items-center justify-between">
+                      <div className="info w-[60%] flex items-center  gap-3">
+                        <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Shah_Rukh_Khan_in_2023_%281%29.jpg"
+                            className="w-full "
+                          />
+                        </div>
+                        <div className="w-[80%] !mt-3">
+                          <h4 className="text-[16px]">Shah Rukh Khan</h4>
+                          <h5 className="!mb-0 text-[13px]">2025-08-01</h5>
+                          <p className="!mt-0 mb-0 line-clamp-2">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electronic typesetting, remaining essentially
+                            unchanged. It was popularised in the 1960s with the
+                            release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing
+                            software like Aldus PageMaker including versions of
+                            Lorem Ipsum.
+                          </p>
+                        </div>
+                      </div>
+                      <Rating
+                        name="half-rating"
+                        defaultValue={2.5}
+                        precision={0.5}
+                        readOnly
+                        // size="small"
+                      />
+                    </div>
+                    <div className="reviews pb-5 border-b border-[rgba(0,0,0,0.2)] mt-3 w-full flex items-center justify-between">
+                      <div className="info w-[60%] flex items-center  gap-3">
+                        <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Shah_Rukh_Khan_in_2023_%281%29.jpg"
+                            className="w-full "
+                          />
+                        </div>
+                        <div className="w-[80%] !mt-3">
+                          <h4 className="text-[16px]">Shah Rukh Khan</h4>
+                          <h5 className="!mb-0 text-[13px]">2025-08-01</h5>
+                          <p className="!mt-0 mb-0 line-clamp-2">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electronic typesetting, remaining essentially
+                            unchanged. It was popularised in the 1960s with the
+                            release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing
+                            software like Aldus PageMaker including versions of
+                            Lorem Ipsum.
+                          </p>
+                        </div>
+                      </div>
+                      <Rating
+                        name="half-rating"
+                        defaultValue={2.5}
+                        precision={0.5}
+                        readOnly
+                        // size="small"
+                      />
+                    </div>
+                    <div className="reviews pb-5 border-b border-[rgba(0,0,0,0.2)] mt-3 w-full flex items-center justify-between">
+                      <div className="info w-[60%] flex items-center  gap-3">
+                        <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Shah_Rukh_Khan_in_2023_%281%29.jpg"
+                            className="w-full "
+                          />
+                        </div>
+                        <div className="w-[80%] !mt-3">
+                          <h4 className="text-[16px]">Shah Rukh Khan</h4>
+                          <h5 className="!mb-0 text-[13px]">2025-08-01</h5>
+                          <p className="!mt-0 mb-0 line-clamp-2">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electronic typesetting, remaining essentially
+                            unchanged. It was popularised in the 1960s with the
+                            release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing
+                            software like Aldus PageMaker including versions of
+                            Lorem Ipsum.
+                          </p>
+                        </div>
+                      </div>
+                      <Rating
+                        name="half-rating"
+                        defaultValue={2.5}
+                        precision={0.5}
+                        readOnly
+                        // size="small"
+                      />
+                    </div>
+                    <div className="reviews pb-5 border-b border-[rgba(0,0,0,0.2)] mt-3 w-full flex items-center justify-between">
+                      <div className="info w-[60%] flex items-center  gap-3">
+                        <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Shah_Rukh_Khan_in_2023_%281%29.jpg"
+                            className="w-full "
+                          />
+                        </div>
+                        <div className="w-[80%] !mt-3">
+                          <h4 className="text-[16px]">Shah Rukh Khan</h4>
+                          <h5 className="!mb-0 text-[13px]">2025-08-01</h5>
+                          <p className="!mt-0 mb-0 line-clamp-2">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electronic typesetting, remaining essentially
+                            unchanged. It was popularised in the 1960s with the
+                            release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing
+                            software like Aldus PageMaker including versions of
+                            Lorem Ipsum.
+                          </p>
+                        </div>
+                      </div>
+                      <Rating
+                        name="half-rating"
+                        defaultValue={2.5}
+                        precision={0.5}
+                        readOnly
+                        // size="small"
+                      />
+                    </div>
+                    <div className="reviews pb-5 border-b border-[rgba(0,0,0,0.2)] mt-3 w-full flex items-center justify-between">
+                      <div className="info w-[60%] flex items-center  gap-3">
+                        <div className="img w-[80px] h-[80px] overflow-hidden rounded-full">
+                          <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Shah_Rukh_Khan_in_2023_%281%29.jpg"
+                            className="w-full "
+                          />
+                        </div>
+                        <div className="w-[80%] !mt-3">
+                          <h4 className="text-[16px]">Shah Rukh Khan</h4>
+                          <h5 className="!mb-0 text-[13px]">2025-08-01</h5>
+                          <p className="!mt-0 mb-0 line-clamp-2">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electronic typesetting, remaining essentially
+                            unchanged. It was popularised in the 1960s with the
+                            release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing
+                            software like Aldus PageMaker including versions of
+                            Lorem Ipsum.
+                          </p>
+                        </div>
+                      </div>
+                      <Rating
+                        name="half-rating"
+                        defaultValue={2.5}
+                        precision={0.5}
+                        readOnly
+                        // size="small"
+                      />
+                    </div>
+                  </div>
 
-              </div>)
-            }
-
+                  <br />
+                  <div className="reviewForm bg-[#f1f1f1] p-4 rounded-md">
+                    <h2 className="text-[18px]">Add Your Review</h2>
+                    <form className="w-full">
+                      <TextField
+                        id="outlined-multiline-flexible"
+                        label="Write a review..."
+                        multiline
+                        rows={4}
+                        className="w-full"
+                      />
+                      <br/>
+                      <br/>
+                       <Rating
+                        name="half-rating"
+                        defaultValue={2.5}
+                        precision={0.5}
+                      />
+                      <div className="flex items-center !mt-5 bg-[#febd69] w-[150px] rounded-md">
+                        <Button className="!text-black !font-[500] ">Submit Review</Button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </section>
       </div>
