@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import images from "../../assets/products/watches/boAt Cosmos Pro 1.webp";
 import "../Products/style.css";
 import { Link } from "react-router-dom";
@@ -8,8 +8,10 @@ import { FaRegHeart } from "react-icons/fa6";
 import { FaCodeCompare } from "react-icons/fa6";
 import { MdOutlineZoomOutMap } from "react-icons/md";
 import Tooltip from "@mui/material/Tooltip";
+import { MyContext } from "../../App";
 
 const Products = () => {
+  const context = useContext(MyContext)
   return (
     <div className="productItem rounded-md shadow-lg overflow-hidden border-1  border-[rgba(0,0,0,0.4)]">
       <div className="group imgWrapper w-[100%] overflow-hidden rounded-md relative">
@@ -34,7 +36,7 @@ const Products = () => {
             </Button>
           </Tooltip>
           <Tooltip title="zoom">
-            <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full  !text-black hover:!bg-[#febd69] !bg-white hover:text-white ">
+            <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full  !text-black hover:!bg-[#febd69] !bg-white hover:text-white "  onClick={() => context.setOpenProductDetailsModel(true)}>
               <MdOutlineZoomOutMap className="text-[15px] !text-black group-hover:text-white" />
             </Button>
           </Tooltip>

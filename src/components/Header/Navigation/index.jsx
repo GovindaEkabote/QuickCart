@@ -103,7 +103,7 @@ const closeSideBar = () => {
               </li>
               <li className="list-none">
                 <Link
-                  to="/"
+                  to="/productlisting"
                   className="link transition text-[14px] uppercase font-[500]"
                 >
                   <Button className="link transition !text-black uppercase hover:!text-[#ff5252] !py-4">

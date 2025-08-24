@@ -184,3 +184,7 @@ input[type=number]::-webkit-outer-spin-button {
   background: #e6b678 !important;
 
 }
+
+.productDetailsModel .MuiDialogContent-root {
+  padding: 0px !important;
+}
