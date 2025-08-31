@@ -10,7 +10,7 @@ const Login = () => {
   const [isShowPassword, setIsShowPassword] = useState(false);
 
   return (
-    <div className="section py-10">
+    <div className="section py-16">
       <div className="container flex !justify-center">
         <div className="card shadow-md w-[400px] m-auto rounded-md bg-white p-5 px-12">
           <h3 className="text-black text-[18px] text-center">
@@ -20,7 +20,7 @@ const Login = () => {
             <div className="form-group !w-full mb-5">
               <TextField
                 id="standard-basic"
-                label="Email Id"
+                label="Enter Email"
                 type="email"
                 variant="standard"
                 className="w-full "
@@ -31,7 +31,7 @@ const Login = () => {
               <TextField
                 id="standard-basic"
                 type={isShowPassword === false ? 'password': 'text'}
-                label="Password"
+                label="Enter Password"
                 variant="standard"
                 className="w-full "
                 required={true}

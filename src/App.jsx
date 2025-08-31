@@ -18,6 +18,7 @@ import ProductZoom from "./components/ProductZoom/index.jsx";
 import { IoMdClose } from "react-icons/io";
 import ProductDetailsPage from "./components/ProductDetailsPage/index.jsx";
 import Login from "./Pages/Login/index.jsx";
+import SignUp from "./Pages/SignUp/index.jsx";
 
 const MyContext = createContext();
 
@@ -60,6 +61,11 @@ function App() {
             path="/login"
             exact={true}
             element={<Login />}
+          />
+          <Route
+            path="/register"
+            exact={true}
+            element={<SignUp />}
           />
         </Routes>
         <Footer />
