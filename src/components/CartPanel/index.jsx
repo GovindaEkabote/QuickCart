@@ -14,14 +14,14 @@ const Cartpanel = () => {
 
   const DrawerList = (
     <Box sx={{ width: 400 }} role="presentation">
-      <div className="flex items-center justify-between py-3 px-3 border-b border-[rgba(0,0,0,0.2)]">
+      <div className="flex items-center justify-between py-3 px-3 border-b border-[rgba(0,0,0,0.2)] ">
         <h1>Shipping Cart (1)</h1>
         <IoCloseSharp
           className="text-[25px] cursor-pointer"
           onClick={toggleDrawer(false)}
         />
       </div>
-      <div className="scroll w-full max-h-[400px] overflow-y-scroll overflow-x-hidden !py-3 px-4">
+      <div className="scroll w-full max-h-[400px] overflow-y-scroll overflow-x-hidden  !py-3 px-4">
         <div className="cartItem w-full flex items-center gap-4 !mb-2 !mt-2 border-b border-[rgba(0,0,0,0.2)] pb-4">
           <div className="img w-[25%] overflow-hidden h-[100px] rounded-md">
             <img
@@ -187,7 +187,7 @@ const Cartpanel = () => {
       </div>
 
       <br></br>
-      <div className="bottomSec absolute bottom-[10px] left-[10px] w-full">
+      <div className="bottomSec absolute bottom-[10px] left-[10px] w-full pr-5 shadow-md">
       <div className="bottomInfo w-full border-t px-4 border-[rgba(0,0,0,0.1)] py-3 flex items-center justify-between flex-col">
         <div className="flex items-center justify-between w-full">
           <span className="text-[15px] font-[600]">1 item</span>
@@ -205,8 +205,8 @@ const Cartpanel = () => {
           <span className="text-[red] font-bold">₹10000</span>
         </div><br/>
         <div className="flex items-center justify-between !mt-5 w-full gap-5">
-            <Button className="btn-lg !bg-[#febd69] !text-black !font-bold !w-[50%] ">View Cart</Button>
-            <Button className="btn-lg !bg-[#febd69] !text-black !font-bold !w-[50%]">Checkout</Button>
+           <Link to='/cart' className="!w-[50%] d-block"><Button className="btn-lg !bg-[#febd69] !text-black !font-bold w-full">View Cart</Button></Link>
+           <Link to='/checkout' className="!w-[50%] d-block"><Button className="btn-lg !bg-[#febd69] !text-black !font-bold w-full">checkout</Button></Link>
         </div>
       </div>
       </div>

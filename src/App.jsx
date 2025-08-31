@@ -19,7 +19,7 @@ import SignUp from "./Pages/SignUp/index.jsx";
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import { IoCloseSharp } from "react-icons/io5";
-import Cartpanel from "./components/CartPanel/index.jsx";
+// import Cartpanel from "./components/CartPanel/index.jsx";
 
 const MyContext = createContext();
 
@@ -29,7 +29,7 @@ function App() {
   const[fullWidth, setFullWidth] = useState(true)
 
   const [open, setOpen] = useState(false);
-    const toggleDrawer = (newOpen) => () => {
+  const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
 
@@ -39,7 +39,9 @@ function App() {
 
   const value = {
     setOpenProductDetailsModel,
-    setOpen
+    setOpen,
+    open,
+    toggleDrawer
   };
 
 
@@ -99,9 +101,7 @@ function App() {
           </div>
         </DialogContent>
       </Dialog>
-       <Drawer open={open} onClose={toggleDrawer(false)} anchor="right">
-        <Cartpanel />
-       </Drawer>
+      
     </>
   );
 }

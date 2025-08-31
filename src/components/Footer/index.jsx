@@ -1,11 +1,20 @@
 import { Button, Checkbox } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+import Drawer from '@mui/material/Drawer';
+import Box from '@mui/material/Box';
+import { IoCloseSharp } from "react-icons/io5";
+import { MyContext } from "../../App.jsx";
+import Cartpanel from "../CartPanel/index.jsx";
 
 const Footer = () => {
+  const context = useContext(MyContext)
+
+
+
   return (
     <>
       <footer className="!py-8 bg-white ">
@@ -145,6 +154,10 @@ const Footer = () => {
         </div>
        
       </div>
+
+       <Drawer open={context.open} onClose={context.toggleDrawer(false)} anchor="right">
+        <Cartpanel />
+       </Drawer>
     </>
   );
 };
