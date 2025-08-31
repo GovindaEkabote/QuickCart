@@ -19,6 +19,7 @@ import SignUp from "./Pages/SignUp/index.jsx";
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import { IoCloseSharp } from "react-icons/io5";
+import Cart from "./Pages/Cart/index.jsx";
 // import Cartpanel from "./components/CartPanel/index.jsx";
 
 const MyContext = createContext();
@@ -76,6 +77,11 @@ function App() {
             path="/register"
             exact={true}
             element={<SignUp />}
+          />
+          <Route
+            path="/cart"
+            exact={true}
+            element={<Cart />}
           />
         </Routes>
         <Footer />

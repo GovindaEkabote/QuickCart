@@ -123,11 +123,11 @@ const ProductDetails = () => {
                 <div class="relative overflow-x-auto">
                   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <tbody>
-                      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+                      <tr class="bg-white border-b  dark:border-gray-700 border-gray-200">
                         <td class=" py-4 font-[700] text-black">Brand</td>
                         <td class="!pl-40 py-4">Apple</td>
                       </tr>
-                      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+                      <tr class="bg-white border-b  dark:border-gray-700 border-gray-200">
                         <td class=" py-4 font-[700] text-black">
                           Manufacturer
                         </td>
@@ -137,7 +137,16 @@ const ProductDetails = () => {
                           635126
                         </td>
                       </tr>
-                      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+                      <tr class="bg-white border-b  dark:border-gray-700 border-gray-200 ">
+                        <td class=" py-4 font-[700] text-black">
+                          Special Features{" "}
+                        </td>
+                        <td class="!pl-40 py-4">
+                          Activity Tracker, Heart Rate Monitor, Multisport
+                          Tracker, Phone Call, Stress Tracking
+                        </td>
+                      </tr>
+                      <tr class="bg-white border-b  dark:border-gray-700 border-gray-200 ">
                         <td class=" py-4 font-[700] text-black">
                           Special Features{" "}
                         </td>
