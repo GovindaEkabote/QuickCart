@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.jpg";
 import Search from "../Search";
@@ -10,6 +10,7 @@ import { IoGitCompareOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 import Tooltip from '@mui/material/Tooltip';
 import Navigation from "./Navigation";
+import { MyContext } from "../../App";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -21,6 +22,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const Header = () => {
+  const context = useContext(MyContext)
   return (
     <header>
       <div className="top-strip py-1 bg-[#febd69] border-t-[1px] border-black-100 border-b-[1px]">
@@ -103,7 +105,7 @@ const Header = () => {
                  </li>
                  <li>
                  <Tooltip title="cart">
-                 <IconButton aria-label="cart">
+                 <IconButton aria-label="cart" onClick={() => context.setOpen(true)}>
                   <StyledBadge badgeContent={4} color="secondary">
                     <ShoppingCartIcon />
                   </StyledBadge>

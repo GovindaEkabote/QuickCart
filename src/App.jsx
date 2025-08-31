@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Help from "./Pages/OtherPage/Help.jsx";
@@ -10,15 +10,16 @@ import ProductDetails from "./Pages/ProductDetails/index.jsx";
 import { createContext, useState } from "react";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
 import ProductZoom from "./components/ProductZoom/index.jsx";
 import { IoMdClose } from "react-icons/io";
 import ProductDetailsPage from "./components/ProductDetailsPage/index.jsx";
 import Login from "./Pages/Login/index.jsx";
 import SignUp from "./Pages/SignUp/index.jsx";
+import Drawer from '@mui/material/Drawer';
+import Box from '@mui/material/Box';
+import { IoCloseSharp } from "react-icons/io5";
+import Cartpanel from "./components/CartPanel/index.jsx";
 
 const MyContext = createContext();
 
@@ -27,14 +28,21 @@ function App() {
   const[maxWidth, setMaxWidth] = useState("lg")
   const[fullWidth, setFullWidth] = useState(true)
 
+  const [open, setOpen] = useState(false);
+    const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
 
   const handleCloseProductModel = () => {
     setOpenProductDetailsModel(false);
   };
 
   const value = {
-    setOpenProductDetailsModel
+    setOpenProductDetailsModel,
+    setOpen
   };
+
+
   return (
     <>
       <MyContext.Provider value={value}>
@@ -90,8 +98,10 @@ function App() {
             </div>
           </div>
         </DialogContent>
-       
       </Dialog>
+       <Drawer open={open} onClose={toggleDrawer(false)} anchor="right">
+        <Cartpanel />
+       </Drawer>
     </>
   );
 }
