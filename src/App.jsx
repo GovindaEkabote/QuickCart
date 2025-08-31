@@ -17,6 +17,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import ProductZoom from "./components/ProductZoom/index.jsx";
 import { IoMdClose } from "react-icons/io";
 import ProductDetailsPage from "./components/ProductDetailsPage/index.jsx";
+import Login from "./Pages/Login/index.jsx";
 
 const MyContext = createContext();
 
@@ -54,6 +55,11 @@ function App() {
             path="/product/details/:id"
             exact={true}
             element={<ProductDetails />}
+          />
+           <Route
+            path="/login"
+            exact={true}
+            element={<Login />}
           />
         </Routes>
         <Footer />

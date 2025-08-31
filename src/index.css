@@ -41,6 +41,10 @@ header .top-strip{
 
 }
 
+.btn-lg{
+  font-size: 18px;
+  padding: 10px 20px !important;
+}
 
 .link:hover {
  color: brown;
