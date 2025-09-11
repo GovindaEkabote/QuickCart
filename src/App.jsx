@@ -20,7 +20,10 @@ import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
 import { IoCloseSharp } from "react-icons/io5";
 import Cart from "./Pages/Cart/index.jsx";
+import Verify from "./Pages/Verify/index.jsx";
 // import Cartpanel from "./components/CartPanel/index.jsx";
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const MyContext = createContext();
 
@@ -38,11 +41,21 @@ function App() {
     setOpenProductDetailsModel(false);
   };
 
+  const openAlertBox = (status,msg) => {
+    if(status === "success"){
+      toast.success(msg)
+    }
+    if(status === "error"){
+      toast.error(msg)
+    }
+  }
+
   const value = {
     setOpenProductDetailsModel,
     setOpen,
     open,
-    toggleDrawer
+    toggleDrawer,
+    openAlertBox
   };
 
 
@@ -83,8 +96,14 @@ function App() {
             exact={true}
             element={<Cart />}
           />
+          <Route
+            path="/varify"
+            exact={true}
+            element={<Verify />}
+          />
         </Routes>
         <Footer />
+         <Toaster />
       </MyContext.Provider>
       <Dialog
         open={openProductDetailsModel}
