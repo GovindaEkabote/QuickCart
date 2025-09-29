@@ -23,6 +23,7 @@ import Cart from "./Pages/Cart/index.jsx";
 import Verify from "./Pages/Verify/index.jsx";
 // import Cartpanel from "./components/CartPanel/index.jsx";
 import toast, { Toaster } from 'react-hot-toast';
+import ForgotPassword from "./Pages/ForgotPassword/index.jsx";
 
 
 const MyContext = createContext();
@@ -100,6 +101,11 @@ function App() {
             path="/varify"
             exact={true}
             element={<Verify />}
+          />
+           <Route
+            path="/forgot-password"
+            exact={true}
+            element={<ForgotPassword />}
           />
         </Routes>
         <Footer />
